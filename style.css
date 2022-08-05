@@ -16,7 +16,7 @@
     justify-content: center;
     width: 100%;
     height: 250px;
-    font-size: 65px;
+    font-size: 5vw;
     color:#c4522b;
     font-weight: 900;
 }
@@ -27,5 +27,27 @@
 }
 
 .navigationButton {
-    height: 100px;
+    display: flex;
+    height: 54vh;
+    width: 18%;
+    background-color: #bb4923;
+    margin: 3px;
+    border-radius: 39px;
+    box-shadow: 0px 4px 6px #000000;
+    border: 6.92855px solid rgba(9, 1, 1, 0.3);
+    text-align: center;
+    margin-left: 36.5px;
+    margin-right: 36.5px;
+}
+
+.navigationButton h2 {
+    font-size: 2vw;
+    margin-top: 86px;
+    color: white;
+    line-height: 36px;
+}
+
+.navigationButton:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.2);
 }
