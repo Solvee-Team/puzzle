@@ -27,7 +27,7 @@
 }
 
 .navigationButton {
-    display: flex;
+    display: inline-flex;
     height: 54vh;
     width: 18%;
     background-color: #bb4923;
@@ -38,6 +38,7 @@
     text-align: center;
     margin-left: 36.5px;
     margin-right: 36.5px;
+    flex-direction: column;
 }
 
 .navigationButton h2 {
@@ -51,3 +52,34 @@
     transition: all .2s ease-in-out;
     transform: scale(1.2);
 }
+
+.backgroundForButton {
+    margin-top: 17vh;
+}
+
+.backgroundForButton img {
+    position: relative;
+    width: 100%;
+    /* height: auto; */
+    margin-top: 25px;
+    min-height: 120px;
+}
+
+#church img {
+    position:relative;
+    width: 100%;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+    min-height: 170px;
+    
+}
+
+#countries {
+    position: relative;
+    width: 100%;
+    bottom: 23px;
+    left: 0;
+    right: 0;
+    /* min-height: 400px; */
+} 
