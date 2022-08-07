@@ -19,6 +19,7 @@
     font-size: 5vw;
     color:#c4522b;
     font-weight: 900;
+    text-shadow: white 4px 4px 0px, #9C9C9C 4px 4px 0px;
 }
 
 .navigation {
@@ -46,6 +47,7 @@
     margin-top: 86px;
     color: white;
     line-height: 36px;
+    font-style: normal;
 }
 
 .navigationButton:hover {
