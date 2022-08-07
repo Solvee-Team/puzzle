@@ -9,17 +9,15 @@
   height: 100vh;
   background-color: #efd1c5;
   display: flex;
-  /* justify-content: center; */
-
   flex-direction: column;
   align-items: center;
 }
 .heading {
-  font-size: 45px;
+  font-size: 40px;
   color: #c4522b;
-  margin: 60px auto;
+  margin: 70px auto;
+  text-shadow: -6px 0 1px #fff;
 }
-
 .navigation-items {
   display: flex;
   justify-content: center;
@@ -28,9 +26,8 @@
   width: 100%;
 }
 .item {
-  margin-right: 30px;
-  margin-bottom: 20px;
-  padding: 30px;
+  margin: 0 30px 20px 0;
+  padding: 45px 30px 30px 30px;
   width: 250px;
   height: 350px;
   background-color: #bb4923;
@@ -43,14 +40,9 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-
 .item:hover {
   transform: scale(1.1);
 }
-/* .item-img {
-  width: 250px;
-  height: 400px;
-} */
 .item-img img {
   width: 100%;
   position: absolute;
