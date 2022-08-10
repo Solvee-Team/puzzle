@@ -52,6 +52,7 @@ body {
     margin-right: 36.5px;
     flex-direction: column;
     transition: 0.5s;
+    text-decoration: none;
 }
 
 .navigationButton h2 {
@@ -87,3 +88,4 @@ body {
         margin-top: 57px;
     }
 }
+
