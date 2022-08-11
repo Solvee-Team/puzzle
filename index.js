@@ -1,151 +1,49 @@
-const container = document.querySelector(".container");
-const options = document.querySelector(".options");
-const items = document.querySelectorAll(".item");
+const href = window.location.search;
+const params = new URLSearchParams(href);
+const { type: info } = Object.fromEntries(Array.from(params.entries()));
 
-const versions = [
+console.log(info);
+const infos = ["tatev", "khorVirap", "sevanavanq"];
+if (!infos.includes(info)) {
+  location.href.replace("404.html");
+}
+
+const information = [
   {
-    bgImage: "./img-versions/places/placesBg.svg",
-    url: [
-      "./img-versions/places/amberd1.png",
-      "./img-versions/places/jermuk1.png",
-      "./img-versions/places/jermuk1.png",
-      "./img-versions/places/axtamar1.png",
-      "./img-versions/places/axtamar1.png",
-      "./img-versions/places/noratus1.png",
-      "./img-versions/places/noratus1.png",
-      "./img-versions/places/lastiver1.png",
-      "./img-versions/places/heruni1.png",
-      "./img-versions/places/heruni1.png",
-      "./img-versions/places/parzlich1.png",
-      "./img-versions/places/areni1.png",
-      "./img-versions/places/cascade1.png",
-      "./img-versions/places/matenadaran1.png",
-      "./img-versions/places/parzlich1.png",
-    ],
-    titles: [
-      "Ամբերդ",
-      "Ջերմուկ",
-      "Քարերի Սիմֆոնիա",
-      "Աղթամար կղզի",
-      "Քարահունջ",
-      "Նորատուս",
-      "Խնձորեսկ",
-      "Լաստիվեր",
-      "Պարիս Հերունի",
-      "Տառերի պուրակ",
-      "Պարզ լիճ",
-      "Արենի",
-      "Կասկադ",
-      "Մատենադարան",
-      "Տաթևի թևեր",
-    ],
+    img: "http://drive.google.com/uc?export=view&id=1hJkiBbqj0OCumx8nNPqPdwTWMEEiEhnr",
+    text: "Տաթևի վանք, միջնադարյան վանական համալիր Հայաստանում։ Գտնվում է Սյունիքի մարզի Տաթև գյուղի հարավում՝Որոտան գետի վտակի ձորի աջափնյա եզերքին։ Ավանդության համաձայն՝վանքը կոչվել է Թադեոս առաքյալի աշակերտ Եվստաթեոսի անունով։",
+    name: "Տաթևի վանք",
   },
-  // {
-  //   bgImage: "./img-versions/churches/churchesBg.svg",
-  //   url: [
-  //     "./img-versions/tatev.jpg",
-  //     "./img-versions/gndevank.jpg",
-  //     "./img-versions/khor-virap.png",
-  //     "./img-versions/sevanavanq.png",
-  //     "./img-versions/texeri.jpg",
-  //     "./img-versions/hagpat.png",
-  //     "./img-versions/aghavnavanq.png",
-  //     "./img-versions/haxarcin.png",
-  //     "./img-versions/dadivanq.png",
-  //     "./img-versions/gefgard.png",
-  //     "./img-versions/zavrtnoc.jpg",
-  //     "./img-versions/tatev.jpg",
-  //     "./img-versions/saghmosavanq.png",
-  //     "./img-versions/kecharis.png",
-  //     "./img-versions/makaravanq.png",
-  //     "./img-versions/noravanq.png",
-  //   ],
-  //   titles: [
-  //     "Տաթևի վանք",
-  //     "Գնդեվանք",
-  //     "Խոր Վիրապ",
-  //     "Սևանավանք",
-  //     "Տեղերի վանք",
-  //     "Հաղպատ",
-  //     "Աղավնավանք",
-  //     "Հաղարծնի վանք",
-  //     "Դադիվանք",
-  //     "Գեղարդի վանք",
-  //     "Զվարթնոց",
-  //     "Անհայտ",
-  //     "Սաղմոսավանք",
-  //     "Կեչառիսի վանք",
-  //     "Մակարավանք",
-  //     "Նորավանք",
-  //   ],
-  // },
-  // {
-  //   bgImage: "./img-versions/countries/countriesBg.svg",
-  //   url: [
-  //     "./img-versions/countries/chambarak1.png",
-  //     "./img-versions/countries/vanadzor1.png",
-  //     "./img-versions/countries/yerevan1.png",
-  //     "./img-versions/countries/tsaghadzor1.png",
-  //     "./img-versions/countries/jermuk1.png",
-  //     "./img-versions/countries/jermuk1.png",
-  //     "./img-versions/countries/goris1.png",
-  //     "./img-versions/countries/stepenavan1.png",
-  //     "./img-versions/countries/noyemberyan1.png",
-  //     "./img-versions/countries/sevan1.png",
-  //     "./img-versions/countries/dilijan1.png",
-  //     "./img-versions/countries/kapan1.png",
-  //     "./img-versions/countries/artashat1.png",
-  //     "./img-versions/countries/gavar1.png",
-  //     "./img-versions/countries/aparan1.png",
-  //     "./img-versions/countries/sisian1.png",
-  //   ],
-  //   titles: [
-  //     "Ճամբարակ",
-  //     "Վանաձոր",
-  //     "Երևան",
-  //     "Ծաղկաձոր",
-  //     "Ջերմուկ",
-  //     "Ջերմուկ",
-  //     "Գորիս",
-  //     "Ստեփանավան",
-  //     "Նոյեմբերյան",
-  //     "Սևան",
-  //     "Դիլիջան",
-  //     "Կապան",
-  //     "Արտաշատ",
-  //     "Գավառ",
-  //     "Ապարան",
-  //     "Սիսիան",
-  //   ],
-  // },
+  {
+    img: "http://drive.google.com/uc?export=view&id=1A2q-peyQ6LvOWi9l6C5JOgmTqu7r7FAV",
+    text: "Խոր վիրապի վանք, ճարտարապետականհուշարձան, 17-րդ դարի վանք-ամրոց Մեծ Հայքի Այրարատ նահանգի Ոստան Հայոց գավառում: Եղել է Հայոց հանրահայտ ուխտատեղիներից՝ կապված Գրիգոր Լուսավորչի անվան հետ։",
+    name: "Խոր Վիրապ",
+  },
+  {
+    img: "http://drive.google.com/uc?export=view&id=1Of4cYQ8MfP5q0St5D9Zpbm0l6qEqLMOh",
+    text: "Սևանավանք, հայկական վանական համալիր Սևանի թերակղզու վրա, Գեղարքունիքի մարզ, Հայաստան։ Հիմնադրվել է 305 թվականին, երկու եկեղեցիները՝ 874 թվականին։ Սևանի վանքը գտնվում է Սևանի թերակղզում (նախկինում՝ կղզի), հիմնադրել է Գրիգոր ԱԼուսավորիչը 305 թվականին։",
+    name: "Սևանավանք",
+  },
 ];
 
-const createEl = el => {
-  return document.createElement(el);
-};
+const img = document.querySelector(".img img");
+const title = document.querySelector(".info h2");
+const about = document.querySelector(".info p");
+const click = document.querySelectorAll(".click");
+console.log(click);
 
 const loadEl = () => {
-  for (let i = 0; i < 16; i++) {
-    const div = createEl("div");
-
-    div.classList.add("option");
-    // div.classList.add(i);
-
-    options.insertAdjacentElement("beforeend", div);
-    div.classList.add("option");
-
-    const title = createEl("p");
-    title.classList.add("title");
-    div.insertAdjacentElement("beforeend", title);
-
-    container.insertAdjacentHTML(
-      "beforeend",
-      `
-                <img src = "./img-versions/countries/countriesBg.svg"/>
-                `
-    );
-
-    //div.insertAdjacentHTML("beforeend", html);
-  }
+  const indexInfos = infos.indexOf(info);
+  console.log(indexInfos);
+  information.forEach((info, i) => {
+    if (indexInfos === i) {
+      img.src = info.img
+      title.innerHTML = info.name;
+      about.innerHTML = info.text;
+    }
+  });
 };
-loadEl();
+
+window.onload = () => {
+  loadEl();
+};
