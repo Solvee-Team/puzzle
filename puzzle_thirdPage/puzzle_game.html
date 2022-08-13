@@ -10,14 +10,26 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <div class="puzzleBox containerForDragAndDrop">
-
+<div class="navigation">
+    <div>
+        <div class="backToPage" onclick="backToSecondPage()"><img src="icons/navigation.svg" alt="return"></div>
+    </div>
+    <div class="tipAndPauseAndTimer">
+        <div class="tip" onclick="showPictureForTwoSeconds()"><img src="icons/clue.svg" width="47" height="47" alt="tip"></div>
+        <div class="pauseIcon" onclick="stopInPause()"><img src="icons/pausa.png" alt="pause" width="37" height="37"></div>
+        <div>
+            <form name=MyForm id="besttimerinhistory"> 
+                <input id="timerinput" name=stopwatch size=15 value="00:00.00" disabled> 
+              </form>
         </div>
     </div>
-
+</div>
+    <div class="container">
+        <div class="puzzleBox containerForDragAndDrop">
+        </div>
+        </div>
+    </div>
     <div id="fourth">
-
     </div>
 </body>
 </html>
