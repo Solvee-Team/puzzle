@@ -2,7 +2,7 @@ const href = window.location.search;
 const params = new URLSearchParams(href);
 const { type: goto } = Object.fromEntries(Array.from(params.entries()));
 
-const gotes =["gefgard","saghmosavanq","kecharis","tatev","khor-virap","sevanavanq","tegher","hagpat","aghavnavanq","hagharcin","dadivanq","zvartnoc","makaravanq","noravanq","aparam","artashat","chambarak","dilijna","gavar","goris","gyumri","jermuk-city","kapan","meghri","noyemberyan","sevan","sisian","stepanavan","tsaghadzor","vanadzor","yerevan","amberd","areni","axtamar","cascade","garni","heruni","jermuk","lastiver","matenadar","noratus","parzlich","qarahoonj","qarer","tarer","tatev-tever","xndzoresk"];
+const gotes =["gefgard","saghmosavanq","kecharis","tatev","khor-virap","sevanavanq","tegher","hagpat","aghavnavanq","hagharcin","dadivanq","zvartnoc","makaravanq","noravanq","aparam","artashat","chambarak","dilijna","gavar","goris","gyumri","jermuk-city","kapan","meghri","noyemberyan","sevan","sisiam","stepanavan","tsaghadzor","vanadzor","yerevan","amberd","areni","axtamar","cascade","garni","heruni","jermuk","lastiver","matenadar","noratus","parzlich","qarahoonj","qarer","tarer","tatev-tever","xndzoresk"];
 const popUp = [
             {
                 img : './ekekegheci/gefgard 1.png',
@@ -140,7 +140,7 @@ const popUp = [
                name : 'Սիսան'
             },
             {
-               img : './citiies/stepanavan 1.png',
+               img : './cities/stepanavan 1.png',
                text : 'Ստեփանավան (նախկինում՝ Օրան-Լոռի, Կամենկա, Ջալալ-օղլի), քաղաք Հայաստանի Լոռու մարզում։ Անվանվել է Ստեփան Շահումյանի անունով։ 1954 թվականից քաղաքի վարչական տարածքի մեջ է մտնում Արմանիս գյուղը։',
                name : 'Ստեփանավան'
             },
