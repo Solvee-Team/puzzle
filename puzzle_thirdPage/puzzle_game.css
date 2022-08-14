@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #EFD1CE;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    background-color: #EFD1CE;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.puzzleBox {
+    width: 530px;
+    height: 431px;
+    background-color: #EFD1CE;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 7px solid gray;
+    filter: drop-shadow(0px 2px 9px rgba(0, 0, 0, 0.55));
+    margin-top: 35px;
+    padding: 10px;
+    border-radius: 9px;
+}
+
+.pieceOfPuzzle {
+    width: 20%;
+    height: 25%;
+    border: 1px solid #892806;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.pieceOfCroppedPicture {
+    position: relative;
+    width: 102px;
+    height: 102px;
+    border: 1px solid black;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.barev {
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+.divForIcons {
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    right:0;
+    display: flex;
+    width: 250px;
+    height: 50px;
+    background-color: #EFD1CE;
+    margin-left: 75px;
+}
+
+.startButton {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color:#EFD1CE;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.startButton:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+    transform: scale(0.8);
+}
+
+.startButtonIcon {
+    width: 40%;
+    height: 45%;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tipAndPauseAndTimer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+.startButtonIcon {
+    cursor: pointer;
+}
+
+.pauseIcon {
+    cursor: pointer;
+}
+
+.tip {
+    cursor: pointer;
+}
+
+.backToPage {
+    cursor: pointer;
+}
+
+#besttimerinhistory { 
+    display: inline-block; 
+    vertical-align: top; 
+    margin-left: 10px; 
+}    
+#timerinput { 
+    text-align: center; 
+    height: 38px; 
+    width: 70px; 
+    color: white; 
+    border-radius: 20px; 
+    background-color: #B54201; 
+    border: none; 
+}
+
+.startButton {
+    display: flex;
+}
+
+.imageForTwoSeconds {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
