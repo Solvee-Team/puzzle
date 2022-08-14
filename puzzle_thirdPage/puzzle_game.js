@@ -1,5 +1,5 @@
 const littleBoxes = document.getElementsByClassName('pieceOfCroppedPicture')
-const croppedPics = document.getElementsByClassName('barev')
+const croppedPics = document.getElementsByClassName('puzzle-pices')
 const myBox = document.getElementsByClassName('pieceOfPuzzle')
 const puzzleBox = document.getElementsByClassName('puzzleBox')
 let pieces = [];
@@ -60,7 +60,7 @@ function makeBordersIdeal() {
 function picture() {
     for (let i = 0, vertical = 0; i < 4; i++, vertical -= 100) {
         for (let j = 0, horizontal = 0; j < 5; j++, horizontal -= 100) {
-            pieces.push(`<div  id=${piecesIndex} draggable='true' style='background-image: url(../puzzle_secondPage/${JSON.parse(localStorage.getItem('selectedPuzzle'))['img']}); background-position: ${horizontal}px ${vertical}px;' class='barev'></div>`);
+            pieces.push(`<div  id=${piecesIndex} draggable='true' style='background-image: url(${JSON.parse(localStorage.getItem('selectedPuzzle'))['img']}); background-position: ${horizontal}px ${vertical}px;' class='puzzle-pices'></div>`);
             piecesIndex++;
         }
     }
@@ -78,10 +78,9 @@ function checkIfWin(arrayWithIdOfPictures) {
     for (let i = 0; i < arrayWithIdOfPictures.length; i++) {
         forCheckLocal.push(+arrayWithIdOfPictures[i].id)
     }
-    console.log(forCheckLocal, arrayForCheck);
     if (forCheckLocal.length === 20) {
         if (arrayEquals(forCheckLocal, arrayForCheck)) {
-            window.location.replace('../final_page/index.html')
+            window.location.replace('../puzzle_info/index.html')
             stopTimer()
             localStorage.setItem('timer', timer);
         }
@@ -92,7 +91,6 @@ function randomArrayShuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     while (0 !== currentIndex) {
       randomIndex = Math.floor(Math.random() * currentIndex);
-      console.log(randomIndex)
       currentIndex -= 1;
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
@@ -107,7 +105,6 @@ function stopInPause() {
 }
 
 function fillThePuzzleBoxes() {
-    console.log(randomArrayShuffle(pieces));
     for (let i = 0; i < littleBoxes.length; i++) {
         littleBoxes[i].innerHTML = shuffled[i]
     }
@@ -126,7 +123,7 @@ function showPictureForTwoSeconds() {
         let imageForTwoSeconds = document.createElement('img')
         imageForTwoSeconds.classList.add('imageForTwoSeconds')
         document.getElementsByClassName('puzzleBox')[0].append(imageForTwoSeconds);
-        imageForTwoSeconds.src = `../puzzle_secondPage/${JSON.parse(localStorage.getItem('selectedPuzzle'))['img']}`
+        imageForTwoSeconds.src = `${JSON.parse(localStorage.getItem('selectedPuzzle'))['img']}`
         function removeImageAfterTwoSeconds() {
             imageForTwoSeconds.remove()
         }
@@ -135,7 +132,6 @@ function showPictureForTwoSeconds() {
 }
 
 function createDivForIcons() {
-    console.log('hello');
     const divForIcons = document.createElement('div');
     document.body.append(divForIcons)
     divForIcons.classList.add('divForIcons');
@@ -152,7 +148,6 @@ function createDivForIcons() {
 const startButton = document.createElement('div');
 startButton.onclick = function() {
     startButtonIsActive = false;
-    console.log(('onclick'));
     for (let i = 0; i < croppedPics.length; i++) {
         croppedPics[i].style.display = 'block';
         myBox[i].style.display = 'flex'
@@ -215,7 +210,7 @@ function startTheGameButton() {
         dragSrcEl.innerHTML = this.innerHTML;
         this.innerHTML = e.dataTransfer.getData('text/html');
     }
-    const arrayOfDivsInPuzzleBox = document.querySelectorAll('.puzzleBox .barev')
+    const arrayOfDivsInPuzzleBox = document.querySelectorAll('.puzzleBox .puzzle-pices')
     checkIfWin(arrayOfDivsInPuzzleBox)
     return false;
   }
