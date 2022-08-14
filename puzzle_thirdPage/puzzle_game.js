@@ -105,6 +105,7 @@ function stopInPause() {
 }
 
 function fillThePuzzleBoxes() {
+    randomArrayShuffle(pieces);
     for (let i = 0; i < littleBoxes.length; i++) {
         littleBoxes[i].innerHTML = shuffled[i]
     }
