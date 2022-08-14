@@ -13,14 +13,14 @@ html,body{
     position: relative;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
 .board{
     width: 77%;
     height: auto;
     padding: 20px;
-    margin-right: 100px;
     background: #F2F2F2;
     border: 11px solid rgba(0, 0, 0, 0.6);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
@@ -45,10 +45,10 @@ html,body{
 }
 .header{
     width: 100%;
-    font-size: 40px;
+    font-size: 30px;
     color:#892806;
     font-family: "Bokonique";
-    font-weight: 400;
+    font-weight: 300;
     line-height: 66px;
 }
 .text{
@@ -77,21 +77,27 @@ html,body{
 .previous{
     width: 50px;
     height: 80px;
-    margin-top: -500px;
     background-color: #C4522B;
     color: aliceblue;
     font-weight: 700;
     font-size: xx-large;
     border: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;  
 }
-.open {
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+}
+ .open {
     text-decoration: none;
-    border: none;
-    margin: 10px 10px 20px 20px;
-    cursor: pointer;
+    margin-right: 30px;
+    width: 100px;
+    color: black;
     background-color: green;
-    color: #fff;
-  }
+ }
   @media screen and (max-width: 800px) {
     body{
         width: fit-content;

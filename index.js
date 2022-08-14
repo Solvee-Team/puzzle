@@ -254,11 +254,18 @@ window.onload = () => {
          text.innerHTML = goto.text;
          }
       }); 
-   };
-      loadEl();
+   };  
+     loadEl();
    }   
-function page2(){
-      window.location.href = "file:///C:/Users/DELL/OneDrive/Desktop/page%204/index.html";
+let indexPages = gotes.indexOf(goto);
+function nextPage(){
+    window.location = `./goto.html?type=${gotes[++indexPages]}`;
+    console.log(gotes.length)
+    if(indexPages > (gotes.length-1)){
+        console.log(gotes.length)
+        window.location = `./goto.html?type=${gotes[0]}`;
     }
-
-
+}
+function select(){
+    window.location = 'index.html'
+}
