@@ -27,7 +27,7 @@ body {
 
 .container {
     margin-top: 50px;
-    position:absolute;
+    position: absolute;
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -49,6 +49,7 @@ body {
     margin-bottom: 20px;
     z-index: 1;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .placeName {
@@ -64,6 +65,18 @@ body {
     background-color: rgba(0, 0, 0, 0.751);
     border-bottom-left-radius: 23.8px;
     border-bottom-right-radius: 23.8px;
+}
+
+.navigation {
+    width: 100%;
+    padding: 0 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.backToPage {
+    cursor: pointer;
 }
 
 .picture {

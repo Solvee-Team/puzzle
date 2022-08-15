@@ -86,3 +86,23 @@ body {
         margin-top: 57px;
     }
 }
+
+@media only screen and (max-width: 830px) {
+    .navigationButton {
+        height: 40vh;
+        width: 250px;
+    }
+    .navigationButton h2 {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navigationButton {
+        height: 30vh;
+        width: 200px;
+    }
+    .navigationButton h2 {
+        margin-top: 30px;
+    }
+}

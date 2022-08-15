@@ -258,13 +258,17 @@ const objectsOfPlacesAndImages = [
     ]
 ]
 
+const backToMainPage = () => {
+    window.location.replace(`../index.html`)
+}
+
 function addPlacements() {
     let j = pages.indexOf(page);
     for(let i = 0; i < objectsOfPlacesAndImages[j].length; i++) {
         const image = document.createElement('img');
         const place = document.createElement('div');
         const placeName = document.createElement('div');
-        
+
         image.src = objectsOfPlacesAndImages[j][i]['img']
         image.classList.add('picture')
         place.classList.add('place');
