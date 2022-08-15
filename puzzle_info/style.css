@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Noto Serif Armenian', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -70,8 +76,8 @@
   color: #fff;
 }
 #previous {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 30px;
   cursor: pointer;
 } 
 

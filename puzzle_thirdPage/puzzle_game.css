@@ -16,6 +16,9 @@ body {
     align-content: center;
     display: flex;
     flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Serif Armenian', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 .fix{
@@ -16,6 +17,9 @@ html, body {
     width: 100%;
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Serif Armenian', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {

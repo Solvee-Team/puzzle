@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fix {
+    position: fixed;
+    bottom: 0px;
+    background-size: cover;
+    width: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Serif Armenian', serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #EFD1C5;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+.container {
+    margin-top: 50px;
+    position: absolute;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.place {
+    position: relative;
+    width: 330px;
+    height: 21vh;
+    display: flex;
+    justify-content: flex-end;
+    border: 5px solid black;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    z-index: 1;
+    /* transition: 0.5s; */
+}
+
+.placeName {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0px;
+    height: 65px;
+    font-size: 25px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.751);
+    border-bottom-left-radius: 23.8px;
+    border-bottom-right-radius: 23.8px;
+}
+
+.picture {
+    position: absolute;
+    width: 320px;
+    height: 20vh;
+    border-radius: 24px;
+}
+
+@media only screen and (max-width: 1570px) {
+    .place {
+        width: 315px;
+    }
+    .picture {
+        width: 305px;
+    }
+}
+
+@media only screen and (max-width: 1526px) {
+    .place {
+        width: 300px;
+    }
+    .picture {
+        width: 290px;
+    }
+}
+
+@media only screen and (max-width: 1437px) {
+    .place {
+        width: 280px;
+    }
+    .picture {
+        width: 270px;
+    }
+}
+
+@media only screen and (max-width: 1375px) {
+    .place {
+        width: 270px;
+    }
+    .picture {
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width: 338px) {
+    .place {
+        width: 200px;
+    }
+    .picture {
+        max-width: 99%;
+    }
+    .placeName {
+        font-size: 80%;
+    }
+}
+
+
+/* .place:hover {
+    /* transition: 0.7s; */
+
+
+/* transform: scale(0.890); */

@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="puzzle_game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Noto+Serif+Armenian:wght@700&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
     <script src="puzzle_game.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-<div class="navigation">
-    <div>
-        <div class="backToPage" onclick="backToSecondPage()"><img src="../imgs/navigation.svg" alt="return"></div>
-    </div>
-    <div class="tipAndPauseAndTimer">
-        <div class="tip" onclick="showPictureForTwoSeconds()"><img src="icons/clue.svg" width="47" height="47" alt="tip"></div>
-        <div class="pauseIcon" onclick="stopInPause()"><img src="icons/pausa.png" alt="pause" width="37" height="37"></div>
+    <div class="navigation">
         <div>
-            <form name=MyForm id="besttimerinhistory"> 
-                <input id="timerinput" name=stopwatch size=15 value="00:00.00" disabled> 
-              </form>
+            <div class="backToPage" onclick="backToSecondPage()"><img src="../imgs/navigation.svg" alt="return"></div>
+        </div>
+        <div class="tipAndPauseAndTimer">
+            <div class="tip" onclick="showPictureForTwoSeconds()"><img src="icons/clue.svg" width="47" height="47"
+                    alt="tip"></div>
+            <div class="pauseIcon" onclick="stopInPause()"><img src="icons/pausa.png" alt="pause" width="37"
+                    height="37"></div>
+            <div>
+                <form name=MyForm id="besttimerinhistory">
+                    <input id="timerinput" name=stopwatch size=15 value="00:00.00" disabled>
+                </form>
+            </div>
         </div>
     </div>
-</div>
     <div class="container">
         <div class="puzzleBox containerForDragAndDrop">
         </div>
-        </div>
+    </div>
     </div>
     <div id="fourth">
     </div>
 </body>
+
 </html>

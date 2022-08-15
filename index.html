@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Noto+Serif+Armenian:wght@700&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
 </head>
+
 <body>
     <div class="container">
-        <header class="head">Խաղա և Սովորի`ր</header>
-        <div class = "navigation">
-            <a href="./puzzle_secondPage/secondPage.html?type=mountains" class="navigationButton" onclick="redirectToImages('mountains')">
-                <h2>ՏԵսարժան Վայրեր</h2>
+        <header class="head">Խաղա և Սովորի՛ր</header>
+        <div class="navigation">
+            <a href="./puzzle_secondPage/secondPage.html?type=mountains" class="navigationButton"
+                onclick="redirectToImages('mountains')">
+                <h2>Տեսարժան Վայրեր</h2>
                 <div class="backgroundForButton">
-                    <img src="vayrer.png" alt="ՏԵսարժան Վայրեր" class="backgroundImage" >
+                    <img src="vayrer.png" alt="ՏԵսարժան Վայրեր" class="backgroundImage">
                 </div>
             </a>
-            <a href="./puzzle_secondPage/secondPage.html?type=churches" class="navigationButton" onclick="redirectToImages('churches')">
+            <a href="./puzzle_secondPage/secondPage.html?type=churches" class="navigationButton"
+                onclick="redirectToImages('churches')">
                 <h2>Հայկական Վանքեր</h2>
                 <div class="backgroundForButton" id="church">
                     <img src="ekexeci_idealakan.png" alt="ՏԵսարժան Վայրեր" class="backgroundImage">
                 </div>
             </a>
-            <a href="./puzzle_secondPage/secondPage.html?type=cities" class="navigationButton" onclick="redirectToImages('cities')">
+            <a href="./puzzle_secondPage/secondPage.html?type=cities" class="navigationButton"
+                onclick="redirectToImages('cities')">
                 <h2>Հայաստանի Քաղաքներ</h2>
                 <div class="backgroundForButton" id="countries">
                     <img src="vanqer_norm.png" alt="ՏԵսարժան Վայրեր" class="backgroundImage">
@@ -33,4 +43,5 @@
         </div>
     </div>
 </body>
+
 </html>

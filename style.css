@@ -2,12 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body {
     width: 100%;
     height:100vh;
     background-color: #efd1c5;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Serif Armenian', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -23,9 +27,10 @@ body {
     width: 100%;
     height: 250px;
     font-size: 5vw;
+    font-family: 'BERD';
     color:#c4522b;
     font-weight: 900;
-    text-shadow: white 4px 4px 0px, #9C9C9C 4px 4px 0px;
+    text-shadow: white -6px 1px 0px;
 }
 
 .navigation {
